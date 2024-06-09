@@ -48,7 +48,9 @@ export default function Hero() {
             <img src={linkedinIcon} alt="linkedin logo" />
           </a>
         </span>
-        <p>With a Passion for Learning New Technologies</p>
+        <p className={styles.description}>
+            With a Passion for Learning New Technologies and developing the skills
+        </p>
         <a href={Resume} download>
           <button className="hover">Resume</button>
         </a>
