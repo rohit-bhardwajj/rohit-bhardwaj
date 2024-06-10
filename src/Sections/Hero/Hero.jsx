@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Hero.module.css";
-import heroimg from "../../assets/hero-img.png";
+import heroimg from "../../assets/rohit-bhardwaj.png";
 import sun from "../../assets/sun.svg";
 import moon from "../../assets/moon.svg";
 import leetcodelight from "../../assets/leetcode-light.svg";
