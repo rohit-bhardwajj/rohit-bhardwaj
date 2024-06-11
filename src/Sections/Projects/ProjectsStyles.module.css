@@ -25,3 +25,11 @@ img{
         align-items: center;
         gap: 30px;
     }
+
+@media(width>=800px){
+   .projectContainer{
+      flex-direction : row;
+      flex-wrap: wrap;
+   }
+
+}

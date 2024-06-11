@@ -1,0 +1,107 @@
+.experience {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+
+
+.experienceContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.experienceBox {
+  background-color: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  min-width: 350px;
+  flex: 1;
+  max-width: 500px;
+}
+
+.experienceBox h3 {
+  font-size: 1.8rem;
+  /* color: var(--btn-color); */
+  margin-bottom: 1rem;
+  font-family: 'Rubik', sans-serif;
+  text-align: left;
+}
+
+.experienceContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.experienceItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.experienceItem i {
+  font-size: 2rem;
+  color: var(--btn-color);
+}
+
+.experienceItem p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.experienceItem p span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--form-text-color);
+}
+
+@media (width >= 800px) {
+  .experienceContainer {
+    justify-content: space-between;
+  }
+
+  .experienceBox {
+    min-width: 400px;
+  }
+
+  .experienceBox h3 {
+    font-size: 2rem;
+  }
+
+  .experienceItem p {
+    font-size: 1.4rem;
+  }
+
+  .experienceItem p span {
+    font-size: 1rem;
+  }
+}
+
+@media (width >= 1400px) {
+  .experienceBox {
+    min-width: 450px;
+  }
+
+  .experienceBox h3 {
+    font-size: 2.2rem;
+  }
+
+  .experienceItem p {
+    font-size: 1.6rem;
+  }
+
+  .experienceItem p span {
+    font-size: 1.1rem;
+  }
+}
