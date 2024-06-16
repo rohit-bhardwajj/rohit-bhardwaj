@@ -9,7 +9,7 @@ import linkedinlight from "../../assets/linkedin-light.svg";
 import linkedindark from "../../assets/linkedin-dark.svg";
 import githublight from "../../assets/github-light.svg";
 import githubdark from "../../assets/github-dark.svg";
-import Resume from "../../assets/cv.pdf";
+import Resume from "../../assets/Rohit_kumar_210303105188.pdf";
 import { useTheme } from '../../common/ThemeContext';
 
 export default function Hero() {
@@ -51,7 +51,7 @@ export default function Hero() {
         <p className={styles.description}>
             With a Passion for Learning New Technologies and developing the skills
         </p>
-        <a href={Resume} download>
+        <a href={Resume} target='_blank' >
           <button className="hover">Resume</button>
         </a>
       </div>
