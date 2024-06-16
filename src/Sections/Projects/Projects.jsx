@@ -9,8 +9,9 @@ function Projects() {
         <div className={styles.projectContainer}>
 
        {
-        ProjectData.map((project)=>
+        ProjectData.map((project,index)=>
         <ProjectCard
+        key={index}
         title={project.title}
         src={project.image}
         github={project.Github}
