@@ -9,7 +9,9 @@
 
   .hero {
     max-width: 200px;
+    
   }
+  
 
   span {
     display: flex;
@@ -24,6 +26,9 @@
       }
     }
   }
+
+  
+  
 
   a {
     width: fit-content;
@@ -69,7 +74,9 @@
 
 .description {
   max-width: 28ch;
+ /* color: var(--text-color); */
 }
+
 
 .info {
   display: flex;

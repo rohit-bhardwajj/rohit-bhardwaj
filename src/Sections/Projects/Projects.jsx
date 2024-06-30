@@ -15,6 +15,7 @@ function Projects() {
         title={project.title}
         src={project.image}
         github={project.Github}
+        live={project.live}
         
          />)
        }

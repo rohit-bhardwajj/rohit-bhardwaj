@@ -3,17 +3,17 @@ import './Skills.css';
 
 const Skills = () => {
   return (
-    <div className="skills">
-      <div className="skill">
-        <p className="skill-name">Git</p>
-        <div className="skill-bar">
+    <div class="skills">
+      <div class="skill">
+        <p class="skill-name">Git</p>
+        <div class="skill-bar">
           <hr style={{ width: '70%' }} />
-          <span className="percentage">70%</span>
+          <span class="percentage">70%</span>
         </div>
       </div>
-      <div className="skill">
-        <p className="skill-name">Java</p>
-        <div className="skill-bar">
+      <div class="skill">
+        <p class="skill-name">Java</p>
+        <div class="skill-bar">
           <hr style={{ width: '60%' }} />
           <span className="percentage">60%</span>
         </div>
@@ -25,11 +25,11 @@ const Skills = () => {
           <span className="percentage">60%</span>
         </div>
       </div>
-      <div className="skill">
-        <p className="skill-name">ReactJs</p>
-        <div className="skill-bar">
+      <div class="skill">
+        <p class="skill-name">ReactJs</p>
+        <div class="skill-bar">
           <hr style={{ width: '50%' }} />
-          <span className="percentage">50%</span>
+          <span class="percentage">50%</span>
         </div>
       </div>
     </div>
