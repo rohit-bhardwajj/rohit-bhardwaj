@@ -5,7 +5,7 @@ import ProjectData from './ProjectData';
 function Projects() {
   return (
     <section id='projects' className={styles.container}>
-        <h1 className="sectionTitle">Projects</h1>
+        <h1 className="sectionTitle">Reactjs Projects</h1>
         <div className={styles.projectContainer}>
 
        {
@@ -16,6 +16,7 @@ function Projects() {
         src={project.image}
         github={project.Github}
         live={project.live}
+        desc={project.desc}
         
          />)
        }
