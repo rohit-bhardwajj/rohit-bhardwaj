@@ -1,5 +1,4 @@
 export const plugins = {
-  tailwindcss: {},
+  tailwindcss: { config: './src/sections/Technologies/tailwind.config.js' },
   autoprefixer: {},
 };
-  

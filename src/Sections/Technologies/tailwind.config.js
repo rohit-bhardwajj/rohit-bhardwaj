@@ -1,4 +1,3 @@
-// src/sections/Technologies/tailwind.config.js
 export const corePlugins = {
   preflight: false, // Disable Tailwind's base styles globally
 };
@@ -15,4 +14,4 @@ export const variants = {
   extend: {},
 };
 
-// export const plugins = [];
+export const plugins = [];
