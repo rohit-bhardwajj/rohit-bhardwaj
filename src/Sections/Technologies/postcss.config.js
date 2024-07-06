@@ -1,5 +1,6 @@
-// src/sections/Technologies/postcss.config.cjs
-export const plugins = {
-  tailwindcss: { config: './src/sections/Technologies/tailwind.config.js' },
-  autoprefixer: {},
-};
+export const plugins = [
+  require('tailwindcss')({
+    config: './src/sections/Technologies/tailwind.config.js'
+  }),
+  require('autoprefixer')
+];
