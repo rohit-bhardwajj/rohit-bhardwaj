@@ -6,7 +6,6 @@ import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
   plugins: [react()],
-  preflight:false,
   css: {
     postcss: {
       plugins: [
