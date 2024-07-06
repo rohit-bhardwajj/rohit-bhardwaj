@@ -12,6 +12,7 @@ import githubdark from "../../assets/github-dark.svg";
 import Resume from "../../assets/Rohit_kumar_210303105188.pdf";
 import { useTheme } from '../../common/ThemeContext';
 import { motion } from "framer-motion";
+import { motion, useScroll, useSpring } from "framer-motion";
 
 // Define delayprop as a constant
 const delayprop = (delay) => ({
