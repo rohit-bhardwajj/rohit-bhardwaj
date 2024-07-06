@@ -6,12 +6,9 @@
   text-align: center;
   height: 100dvh;
   min-height: 500px;
-
   .hero {
     max-width: 200px;
-    
   }
-  
 
   span {
     display: flex;
@@ -26,9 +23,6 @@
       }
     }
   }
-
-  
-  
 
   a {
     width: fit-content;
@@ -73,8 +67,11 @@
 }
 
 .description {
-  max-width: 28ch;
- /* color: var(--text-color); */
+  max-width: 35ch;
+  align-self: center;
+  font-size: 18px;
+  font-weight: 300;
+  color:var(--text-color)
 }
 
 
@@ -89,7 +86,11 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-evenly;
-
+     
+    img {
+      overflow-clip-margin: content-box;
+      overflow: clip;
+   }
     .hero {
       max-width: 350px;
       width: 350px;

@@ -10,15 +10,15 @@ export default [
         image:img1,//src
         Github:'https://tasks-mate.netlify.app',//repo link
         live : 'https://tasks-mate.netlify.app',//project live link
-        desc: 'TaskMate is a React js based app...'
+        desc: 'Task management app'
     },
     {
         Pid:2,
-        title:'Password Generator',
+        title:'PassKey',
         image:img2,//src
         Github:'https://rohit-bhardwajj.github.io/PasswordGenerator/',//repo link
         live : 'https://rohit-bhardwajj.github.io/PasswordGenerator/',//project live link
-        desc: 'TaskMate is a React js based app...'
+        desc: 'Dynamic length password generator'
     },
     // {
     //     Pid:3,
@@ -29,11 +29,11 @@ export default [
     // },
     {
         Pid:4,
-        title:'Currency-Converter',
+        title:'Convert-X',
         image:img4,//src
         Github:'https://rohit-bhardwajj.github.io/currencyConverter/',//repo link
         live : 'https://rohit-bhardwajj.github.io/currencyConverter/',//project live link
-        desc: 'TaskMate is a React js based app...'
+        desc: 'currency converter app'
     },
     
 ]
