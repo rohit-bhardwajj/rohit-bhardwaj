@@ -35,9 +35,8 @@ function Hero() {
   const githubIcon = theme === 'light' ? githublight : githubdark;
   const linkedinIcon = theme === 'light' ? linkedinlight : linkedindark;
   const leetcodeIcon = theme === 'light' ? leetcodelight : leetcodedark;
-
   return (
-    <section id="hero" className={styles.container}>
+    <section id="hero" className={styles.container}>  
       <div className={styles.colorModeContainer}>
         <img className={styles.hero} src={heroimg} alt="Profile picture" />
         <img
