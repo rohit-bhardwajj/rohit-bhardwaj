@@ -6,13 +6,6 @@ import autoprefixer from 'autoprefixer';
 export default defineConfig({
   plugins: [react()],
   css: {
-    postcss: {
-      plugins: [
-        tailwindcss({
-          config: './src/sections/Technologies/tailwind.config.js',
-        }),
-        autoprefixer,
-      ],
-    },
+    postcss: './postcss.config.mjs', // Use .mjs if using ES Modules
   },
 });
