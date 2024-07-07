@@ -1,7 +1,7 @@
 // src/tailwind.config.js
 module.exports = {
   corePlugins: {
-    preflight: false, // Disable preflight if you don't want Tailwind's base styles
+    preflight: true, // Disable preflight if you don't want Tailwind's base styles
   },
   content: [
     'index.html',
