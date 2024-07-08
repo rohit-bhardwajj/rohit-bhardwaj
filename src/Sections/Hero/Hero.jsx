@@ -12,7 +12,8 @@ import githubdark from "../../assets/github-dark.svg";
 import Resume from "../../assets/Rohit_kumar_210303105188.pdf";
 import { useTheme } from '../../common/ThemeContext';
 import { motion } from "framer-motion";
-// import { motion, useScroll, useSpring } from "framer-motion";
+import { RiShareForwardBoxFill } from "react-icons/ri";
+
 
 // Define delayprop as a constant
 const delayprop = (delay) => ({
@@ -29,23 +30,32 @@ const delayprop = (delay) => ({
     }
   }
 });
+const delayprop2 = (delay) => ({
+  hidden: {
+    y: -100,
+    opacity: 0
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      delay: delay
+    }
+  }
+});
 
 function Hero() {
   const { theme, toggleTheme } = useTheme();
   const themeIcon = theme === 'light' ? sun : moon;
-  const githubIcon = theme === 'light' ? githublight : githubdark;
-  const linkedinIcon = theme === 'light' ? linkedinlight : linkedindark;
-  const leetcodeIcon = theme === 'light' ? leetcodelight : leetcodedark;
+  const githubIcon =  githubdark;
+  const linkedinIcon =  linkedindark;
+  const leetcodeIcon =  leetcodedark;
+
   return (
-    <section id="hero" className={styles.container}>  
+    <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
-        <img className={styles.hero} src={heroimg} alt="Profile picture" />
-        <img
-          src={themeIcon}
-          alt="Color mode icon"
-          className={styles.colorMode}
-          onClick={toggleTheme}
-        />
+        <img className={`border-4 rounded-full border-gray-700 ${styles.hero}`} src={heroimg} alt="Profile picture" />
       </div>
       <div className={styles.info}>
         <motion.h1
@@ -58,6 +68,7 @@ function Hero() {
         <motion.h2
           initial="hidden"
           animate="visible"
+          className='font-normal'
           variants={delayprop(1.5)} // Use delayprop with delay 1.5 seconds
         >
           FRONTEND DEVELOPER
@@ -81,19 +92,37 @@ function Hero() {
           initial="hidden"
           animate="visible"
           variants={delayprop(2.5)} // Use delayprop with delay 2.5 seconds
-          className={styles.description}
+          className={` ${styles.description}`}
         >
           Passionate about modern web development and expanding my expertise, I am eager to leverage my skills in a dynamic environment.
         </motion.p>
-        <motion.a
-          initial="hidden"
-          animate="visible"
-          variants={delayprop(3)} // Use delayprop with delay 3 seconds
-          href={Resume}
-          target='_blank' rel="noopener noreferrer"
-        >
-          <button className="hover">Resume</button>
-        </motion.a>
+        <div className="flex gap-5 justify-center">
+          <motion.a
+            initial="hidden"
+            animate="visible"
+            variants={delayprop2(3)} // Use delayprop with delay 3 seconds
+            href={Resume}
+            target='_blank' rel="noopener noreferrer"
+          >
+            <button className="bg-[#181818] border-[#484848] border-solid  text-white font-semibold py-3 px-3 shadow-md rounded-full hover:bg-black flex items-center justify-center space-x-2">
+              View Résumé <br /> <RiShareForwardBoxFill />
+
+            </button>
+          </motion.a>
+
+          <motion.a
+            initial="hidden"
+            animate="visible"
+            variants={delayprop2(3)} // Use delayprop with delay 3 seconds
+            href="https://www.linkedin.com/in/rohittbhardwajj" // Adjust this if needed
+            target='_blank' rel="noopener noreferrer"
+          >
+            <button className="btn btn-secondary bg-[#181818] border-[#484848] border-solid text-white font-semibold  py-3 px-3 rounded-full shadow-md flex items-center justify-center space-x-2">
+              Let's Connect
+              <span role="img" aria-labelledby="wave" className={` wave ${styles.wave}`}>👋🏻</span>
+            </button>
+          </motion.a>
+        </div>
       </div>
     </section>
   );

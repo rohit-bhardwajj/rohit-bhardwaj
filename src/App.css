@@ -1,21 +1,28 @@
-:root {
+/* :root {
   --background-color: #fff;
   --btn-color: #0987f2;
   --btn-text-color: #fff;
-  --project-card-bg: #ffffff00;
   --text-color: #222;
-  --form-text-color: #555;
   --footer-text-color: #888;
+} */
+*{
+  -ms-overflow-style: none;
 }
-
-
-[data-theme='dark'] {
-    --background-color: #222;
-    --btn-color: #fff;
-    --btn-text-color: #222;
-    --project-card-bg: #fff;
-    --text-color: #fff;
-    --form-text-color: #fff;
+::-webkit-scrollbar {
+  display: none;
+}
+button{
+  cursor:pointer;
+}
+:root {
+  --background-color: #222;
+  --btn-color: #fff;
+  /* --btn-text-color: #222; */
+  /* --project-card-bg: #fff; */
+  --text-color: #fff;
+  --form-text-color: #fff;
+  /* --form-text-color: #555; */
+  /* --project-card-bg: #ffffff00; */
     --footer-text-color: #bbb;
   }
 
@@ -39,6 +46,9 @@ h1,h2,h3,p{
 h2,h3,p{
     font-family: 'Roboto Mono',monospace;
 }
+/* h1,h2{
+     text-transform: uppercase; 
+} */
 
 h1{
     font-family: 'Rubik',sans-serif;
@@ -53,6 +63,17 @@ p{
 }
 .hover{
     cursor: pointer;
+}
+.progress-bar {
+  position:fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  border-radius: 5px;
+  background: skyblue;
+  transform-origin: 0%;
 }
 
 @media(width>=800px){
