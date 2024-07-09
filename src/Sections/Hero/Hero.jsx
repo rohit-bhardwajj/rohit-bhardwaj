@@ -104,7 +104,7 @@ function Hero() {
             href={Resume}
             target='_blank' rel="noopener noreferrer"
           >
-            <button className="bg-[#181818] border-[#484848] border-solid  text-white font-semibold py-3 px-3 shadow-md rounded-full hover:bg-black flex items-center justify-center space-x-2">
+            <button className="bg-[#181818] border-[#484848] border-solid max-sm:py-3 max-sm:px-2 text-white font-semibold py-3 px-3 shadow-md rounded-full hover:bg-black flex items-center justify-center space-x-2">
               View Résumé <br /> <RiShareForwardBoxFill />
 
             </button>
@@ -117,7 +117,7 @@ function Hero() {
             href="https://www.linkedin.com/in/rohittbhardwajj" // Adjust this if needed
             target='_blank' rel="noopener noreferrer"
           >
-            <button className="btn btn-secondary bg-[#181818] border-[#484848] border-solid text-white font-semibold  py-3 px-3 rounded-full shadow-md flex items-center justify-center space-x-2">
+            <button className="btn btn-secondary bg-[#181818] border-[#484848] border-solid text-white font-semibold  py-3 px-3 rounded-full shadow-md flex items-center justify-center space-x-2 max-sm:py-3 max-sm:px-2">
               Let's Connect
               <span role="img" aria-labelledby="wave" className={` wave ${styles.wave}`}>👋🏻</span>
             </button>

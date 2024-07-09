@@ -8,7 +8,7 @@ export default [
         Pid:1,
         title:'TaskMate',
         image:img1,//src
-        Github:'https://tasks-mate.netlify.app',//repo link
+        Github:'https://github.com/rohit-bhardwajj/TaskMateLocal',//repo link
         live : 'https://tasks-mate.netlify.app',//project live link
         desc: 'This ,Task management app , includes implementation of Context Api and local Storage usage to store tasks locally',
         technologies:['HTML','CSS','JS','REACT JS']
@@ -17,7 +17,7 @@ export default [
         Pid:2,
         title:'PassKey',
         image:img2,//src
-        Github:'https://rohit-bhardwajj.github.io/PasswordGenerator/',//repo link
+        Github:'https://github.com/rohit-bhardwajj/PasswordGenerator',//repo link
         live : 'https://rohit-bhardwajj.github.io/PasswordGenerator/',//project live link
         desc: 'Dynamic length password generator',
         technologies:['HTML','CSS','JS','REACT JS']
@@ -33,7 +33,7 @@ export default [
             Pid:4,
             title:'Convert-X',
             image:img4,//src
-            Github:'https://rohit-bhardwajj.github.io/currencyConverter/',//repo link
+            Github:'https://github.com/rohit-bhardwajj/currencyConverter',//repo link
             live : 'https://rohit-bhardwajj.github.io/currencyConverter/',//project live link
             desc: 'currency converter app',
             technologies:['HTML','CSS','JS','REACT JS']
