@@ -14,7 +14,7 @@ function App() {
   const { scrollYProgress } = useScroll();
 
   return (
-      <div>
+      <div >
         {/* <Navbar/> */}
         <div className="element">
                <motion.div className="progress-bar" style={{ scaleX: scrollYProgress }} />

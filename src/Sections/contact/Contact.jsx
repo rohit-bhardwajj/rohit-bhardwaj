@@ -7,11 +7,16 @@ const Contact = () => {
         <form action="https://formspree.io/f/xnqeedvz" method='post'>
           <div className='formGroup'>
             <label htmlFor="name" hidden>Name</label>
-            <input type="text" name='name' placeholder='Name' id="name" required/>
+            <input type="name" name='name' placeholder='Name' id="name" required/>
           </div>
           <div className='formGroup'>
             <label htmlFor="email" hidden>Email</label>
-            <input type="text" name='email' placeholder='Email' id="email" required/>
+            <input type="email" name='email' placeholder='Email' id="email" required/>
+          </div>
+
+          <div className='formGroup'>
+            <label htmlFor="subject" hidden>Subject</label>
+            <input type="text" name='subject' placeholder='Subject' id="subject" required/>
           </div>
          
           <div className='formGroup'>
