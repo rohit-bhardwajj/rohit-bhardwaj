@@ -3,7 +3,7 @@ import ProjectData from './ProjectData';
 
 function Projects2() {
     return (
-        <div className='border-b border-neutral-900 pb-12'>
+        <div id="projects" className='border-b border-neutral-900 pb-12'>
             <h1 className='my-20 text-center text-4xl font-bold text-white'>Projects</h1>
             <div className='flex flex-col justify-end items-center md:items-end gap-5 px-6'>
                 {ProjectData.map((project, index) => (

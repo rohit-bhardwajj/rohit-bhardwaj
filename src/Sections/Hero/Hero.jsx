@@ -53,7 +53,7 @@ function Hero() {
   const leetcodeIcon =  leetcodedark;
 
   return (
-    <section id="hero" className={styles.container}>
+    <section id="home" className={styles.container}>
       <div className={styles.colorModeContainer}>
         <img className={`border-4 rounded-full border-gray-700 ${styles.hero}`} src={heroimg} alt="Profile picture" />
       </div>
