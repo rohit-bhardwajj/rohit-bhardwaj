@@ -54,22 +54,24 @@ function Hero() {
 
   return (
     <section id="home" className={styles.container}>
-      <div className={styles.colorModeContainer}>
+      <motion.div initial={{x:100 ,opacity:0}} animate={{x:0,opacity:1}} transition={{duration:1, delay:1.2}} className={styles.colorModeContainer}>
         <img className={`border-4 rounded-full border-gray-700 ${styles.hero}`} src={heroimg} alt="Profile picture" />
-      </div>
+      </motion.div>
       <div className={styles.info}>
         <motion.h1
           initial="hidden"
           animate="visible"
           variants={delayprop(1)} // Use delayprop with delay 1 second
+        className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text tracking-tight text-transparent"
         >
           ROHIT <br /> BHARDWAJ
         </motion.h1>
         <motion.h2
           initial="hidden"
           animate="visible"
-          className='font-normal'
+          className='font-normal '
           variants={delayprop(1.5)} // Use delayprop with delay 1.5 seconds
+          
         >
           FRONTEND DEVELOPER
         </motion.h2>
@@ -97,7 +99,7 @@ function Hero() {
           Passionate about modern web development and expanding my expertise, I am eager to leverage my skills in a dynamic environment.
         </motion.p>
         <div className="flex gap-5 justify-center">
-          <motion.a
+          {/* <motion.a
             initial="hidden"
             animate="visible"
             variants={delayprop2(3)} // Use delayprop with delay 3 seconds
@@ -108,7 +110,7 @@ function Hero() {
               View Résumé <br /> <RiShareForwardBoxFill />
 
             </button>
-          </motion.a>
+          </motion.a> */}
 
           <motion.a
             initial="hidden"
