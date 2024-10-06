@@ -1,17 +1,28 @@
 /* src/components/Navbar.css */
 .navbar {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color); /* Keeps customizable colors */
   color: var(--text-color);
-  padding: 1rem;
+  padding: 0.5rem 1rem; /* Adjusts padding for better spacing */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+  position: fixed;
+  width: 100%; /* Ensures the navbar spans the full width */
+  top: 0;
+  z-index: 10; /* Ensures it's above other elements */
+  font-size: 1rem; /* Base font size */
 }
+
 .navbar-menu {
   list-style: none;
   display: flex;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
+
 .navbar-item a,
 .navbar-item button {
   color: var(--text-color);
@@ -19,4 +30,53 @@
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0.5rem 0.75rem; /* Adjusted padding */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition */
+  position: relative; /* Relative positioning for pseudo-element */
+}
+
+.navbar-item a:hover,
+.navbar-item button:hover {
+  color: var(--hover-text-color); /* Color change on hover */
+  transform: scale(1.05); /* Slightly enlarges the item on hover */
+}
+
+/* Add a subtle underline effect on hover */
+.navbar-item a::after,
+.navbar-item button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: var(--hover-text-color); /* Underline color */
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.navbar-item a:hover::after,
+.navbar-item button:hover::after {
+  transform: scaleX(1); /* Shows the underline on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stacks the navbar on smaller screens */
+    padding: 0.5rem; /* Adjusts padding */
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+
+  .navbar-menu {
+    flex-direction: column; /* Stack items vertically */
+    gap: 0.5rem; /* Reduces gap between items */
+  }
+
+  .navbar-item a,
+  .navbar-item button {
+    padding: 0.5rem; /* Adjusts padding for better touch targets */
+    width: 100%; /* Full width on mobile */
+    text-align: center; /* Center text on mobile */
+  }
 }
