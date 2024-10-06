@@ -30,17 +30,34 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 0.75rem; /* Adjusts padding for better clickable area */
-  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
-  border-radius: 0.25rem; /* Rounded corners */
+  padding: 0.5rem 0.75rem; /* Adjusted padding */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition */
+  position: relative; /* Relative positioning for pseudo-element */
 }
 
 .navbar-item a:hover,
 .navbar-item button:hover {
-  background-color: rgba(0, 0, 0, 0.2); /* Slightly darker */
   color: var(--hover-text-color); /* Color change on hover */
   transform: scale(1.05); /* Slightly enlarges the item on hover */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+}
+
+/* Add a subtle underline effect on hover */
+.navbar-item a::after,
+.navbar-item button::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px; /* Thickness of the underline */
+  background-color: var(--hover-text-color); /* Underline color */
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.navbar-item a:hover::after,
+.navbar-item button:hover::after {
+  transform: scaleX(1); /* Shows the underline on hover */
 }
 
 /* Responsive styles */
