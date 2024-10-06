@@ -2,7 +2,7 @@
 .navbar {
   background-color: var(--bg-color); /* Keeps customizable colors */
   color: var(--text-color);
-  padding: 1rem; /* Adjusts padding for better spacing */
+  padding: 0.5rem 1rem; /* Adjusts padding for better spacing */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,6 +11,7 @@
   width: 100%; /* Ensures the navbar spans the full width */
   top: 0;
   z-index: 10; /* Ensures it's above other elements */
+  font-size: 1rem; /* Base font size */
 }
 
 .navbar-menu {
@@ -29,28 +30,36 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 1rem; /* Adds padding for better clickable area */
+  padding: 0.5rem 0.75rem; /* Adjusts padding for better clickable area */
   transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+  border-radius: 0.25rem; /* Rounded corners */
 }
 
 .navbar-item a:hover,
 .navbar-item button:hover {
   background-color: rgba(0, 0, 0, 0.2); /* Slightly darker */
   color: var(--hover-text-color); /* Color change on hover */
-  border-radius: 0.25rem; /* Rounded corners for a smoother UI */
   transform: scale(1.05); /* Slightly enlarges the item on hover */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stacks the navbar on smaller screens */
-    padding: 0.5rem;
+    padding: 0.5rem; /* Adjusts padding */
+    font-size: 0.9rem; /* Slightly smaller font size */
   }
 
   .navbar-menu {
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically */
     gap: 0.5rem; /* Reduces gap between items */
+  }
+
+  .navbar-item a,
+  .navbar-item button {
+    padding: 0.5rem; /* Adjusts padding for better touch targets */
+    width: 100%; /* Full width on mobile */
+    text-align: center; /* Center text on mobile */
   }
 }
