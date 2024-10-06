@@ -1,17 +1,27 @@
 /* src/components/Navbar.css */
 .navbar {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color); /* Keeps customizable colors */
   color: var(--text-color);
-  padding: 1rem;
+  padding: 1rem; /* Adjusts padding for better spacing */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+  position: fixed;
+  width: 100%; /* Ensures the navbar spans the full width */
+  top: 0;
+  z-index: 10; /* Ensures it's above other elements */
 }
+
 .navbar-menu {
   list-style: none;
   display: flex;
   gap: 1rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
 }
+
 .navbar-item a,
 .navbar-item button {
   color: var(--text-color);
@@ -19,4 +29,26 @@
   background: none;
   border: none;
   cursor: pointer;
+  padding: 0.5rem 1rem; /* Adds padding for better clickable area */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.navbar-item a:hover,
+.navbar-item button:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Adds a subtle hover effect */
+  color: var(--hover-text-color); /* Optional color change on hover */
+  border-radius: 0.25rem; /* Rounded corners for a smoother UI */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stacks the navbar on smaller screens */
+    padding: 0.5rem;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    gap: 0.5rem; /* Reduces gap between items */
+  }
 }
