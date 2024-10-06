@@ -30,14 +30,16 @@
   border: none;
   cursor: pointer;
   padding: 0.5rem 1rem; /* Adds padding for better clickable area */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
 
 .navbar-item a:hover,
 .navbar-item button:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Adds a subtle hover effect */
-  color: var(--hover-text-color); /* Optional color change on hover */
+  background-color: rgba(0, 0, 0, 0.2); /* Slightly darker */
+  color: var(--hover-text-color); /* Color change on hover */
   border-radius: 0.25rem; /* Rounded corners for a smoother UI */
+  transform: scale(1.05); /* Slightly enlarges the item on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow effect */
 }
 
 /* Responsive styles */
