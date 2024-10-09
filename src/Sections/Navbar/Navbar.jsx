@@ -1,7 +1,7 @@
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useRef, useState } from "react";
 import { Link as ScrollLink } from 'react-scroll';
-
+import './Navbar.css'
 const Navbar = () => {
   const [isHidden, setIsHidden] = useState(false);
   const { scrollY } = useScroll();
