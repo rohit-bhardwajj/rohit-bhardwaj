@@ -64,7 +64,7 @@ function Hero() {
           variants={delayprop(1)} // Use delayprop with delay 1 second
         className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text tracking-tight text-transparent"
         >
-          ROHIT <br /> BHARDWAJ
+          ROHIT <br /> sharma
         </motion.h1>
         <motion.h2
           initial="hidden"
