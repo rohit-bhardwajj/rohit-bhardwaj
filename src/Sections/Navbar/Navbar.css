@@ -1,23 +1,35 @@
-/* src/components/Navbar.css /updated*/
+/* Improved Navbar CSS */
+
+/* Root Variables for Customizable Colors */
+:root {
+  --bg-color: #D3D3D3;
+  --text-color: #000;
+  --hover-text-color: #4A5568;
+  --active-text-color: rgba(0, 0, 0, 0.3);
+  --border-color: #718096;
+}
+
+/* Navbar Styling */
 .navbar {
-  background-color: var(--bg-color); /* Keeps customizable colors */
+  background-color: var(--bg-color);
   color: var(--text-color);
-  padding: 0.5rem 1rem; /* Adjusts padding for better spacing */
+  padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds shadow for depth */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   position: fixed;
-  width: 100%; /* Ensures the navbar spans the full width */
+  width: 100%;
   top: 0;
-  z-index: 10; /* Ensures it's above other elements */
-  font-size: 1rem; /* Base font size */
+  z-index: 10;
+  transition: background-color 0.3s ease; /* Smooth background transition */
 }
 
+/* Navbar Menu Items */
 .navbar-menu {
-  list-style: none;
   display: flex;
   gap: 1rem;
+  list-style: none;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -30,18 +42,24 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem 0.75rem; /* Adjusted padding */
-  transition: color 0.3s, transform 0.3s; /* Smooth transition */
-  position: relative; /* Relative positioning for pseudo-element */
+  padding: 0.75rem 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  font-size: 1.1rem;
+  border-radius: 0.25rem; /* Rounded corners for better aesthetics */
 }
 
 .navbar-item a:hover,
-.navbar-item button:hover {
-  color: var(--hover-text-color); /* Color change on hover */
-  transform: scale(1.05); /* Slightly enlarges the item on hover */
+.navbar-item button:hover,
+.navbar-item a:focus,
+.navbar-item button:focus {
+  color: var(--hover-text-color);
+  transform: scale(1.05); /* Enlarges slightly on hover */
+  outline: none; /* Removes the default browser outline */
+  background-color: #E2E8F0; /* Subtle background change on hover */
 }
 
-/* Add a subtle underline effect on hover */
+/* Add subtle underline effect */
 .navbar-item a::after,
 .navbar-item button::after {
   content: '';
@@ -49,34 +67,47 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 2px; /* Thickness of the underline */
-  background-color: var(--hover-text-color); /* Underline color */
-  transform: scaleX(0); /* Initially hidden */
-  transition: transform 0.3s; /* Smooth transition */
+  height: 2px;
+  background-color: var(--hover-text-color);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
 }
 
 .navbar-item a:hover::after,
 .navbar-item button:hover::after {
-  transform: scaleX(1); /* Shows the underline on hover */
+  transform: scaleX(1);
 }
 
-/* Responsive styles */
+/* Active state */
+.navbar-item a:active,
+.navbar-item button:active {
+  color: var(--active-text-color);
+  background-color: #CBD5E0; /* Lighter background for active state */
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* Stacks the navbar on smaller screens */
-    padding: 0.5rem; /* Adjusts padding */
-    font-size: 0.9rem; /* Slightly smaller font size */
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 0.9rem;
   }
 
   .navbar-menu {
-    flex-direction: column; /* Stack items vertically */
-    gap: 0.5rem; /* Reduces gap between items */
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   .navbar-item a,
   .navbar-item button {
-    padding: 0.5rem; /* Adjusts padding for better touch targets */
-    width: 100%; /* Full width on mobile */
-    text-align: center; /* Center text on mobile */
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
   }
+}
+
+/* Adding a subtle border for better definition */
+.navbar {
+  border: 1px solid var(--border-color);
 }
